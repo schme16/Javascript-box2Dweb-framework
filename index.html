@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="USQApp">
+
+<head>
+
+	<!--Sets the  text encoding!-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<!--Tells iDevices that the site is a Web App!-->
+		<meta name="apple-mobile-web-app-capable" content="yes" >
+
+	<!--Changes the ios top-bar/status bar to solid black, removing 20px from viewport height!-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" >
+
+	<!--Sets the Viewport properties!-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi">
+
+
+	<!--Assigns a shortcut image and favicon!-->
+		<link rel="icon" href="sys/img/icons/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon"  href="sys/img/icons/favicon.ico"  type="image/x-icon">
+		<link rel="shortcut icon"  href="sys/img/icons/favicon.ico"  type="image/vnd.microsoft.icon"><!--The 2010 IANA standard but not supported in IE-->
+
+
+	<!--Web App icons and splashes!-->
+		<link rel="apple-touch-icon" href="sys/img/icons/apple-touch-icon.png" >
+
+        <!-- iPhone -->
+        <link href="sys/img/splashes/apple-touch-startup-image-320x460.png"
+              media="(device-width: 320px)"
+              rel="apple-touch-startup-image">
+        <!-- iPhone (Retina) -->
+        <link href="sys/img/splashes/apple-touch-startup-image-640x920.png"
+              media="(device-width: 320px)
+                 and (-webkit-device-pixel-ratio: 2)"
+              rel="apple-touch-startup-image">
+        <!-- iPad (portrait) -->
+        <link href="sys/img/splashes/apple-touch-startup-image-768x1004.png"
+              media="(device-width: 768px)
+                 and (orientation: portrait)"
+              rel="apple-touch-startup-image">
+        <!-- iPad (landscape) -->
+        <link href="sys/img/splashes/apple-touch-startup-image-748x1024.png"
+              media="(device-width: 768px)
+                 and (orientation: landscape)"
+              rel="apple-touch-startup-image">
+        <!-- iPad (Retina, portrait) -->
+        <link href="sys/img/splashes/apple-touch-startup-image-1536x2008.png"
+              media="(device-width: 768px)
+                 and (orientation: portrait)
+                 and (-webkit-device-pixel-ratio: 2)"
+              rel="apple-touch-startup-image">
+        <!-- iPad (Retina, landscape) -->
+        <link href="sys/img/splashes/apple-touch-startup-image-1496x2048.png"
+              media="(device-width: 768px)
+                 and (orientation: landscape)
+                 and (-webkit-device-pixel-ratio: 2)"
+              rel="apple-touch-startup-image">
+
+
+	<!--Stylesheets!-->
+		<link rel="stylesheet" type="text/css"  href="sys/css/bootstrap.min.css" >
+		<link rel="stylesheet" type="text/css"  href="sys/css/styles.css" >
+
+
+	<!--Scripts!-->
+	<script src="bower_components/box2dweb/Box2dWeb-2.1.a.3.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="bower_components/pixi.js/bin/pixi.min.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="sys/js/pixi-transparent.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="bower_components/Keypress/keypress-2.1.3.min.js" type="text/javascript" charset="utf-8" ></script>
+  
+<!-- Maps -->
+  <script>map = {}</script>
+  <script src="sys/maps/map_level-1.js" type="text/javascript" charset="utf-8" ></script>
+
+
+<!-- physics helpers -->
+  <script src="sys/js/phys-common.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="sys/js/phys-world.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="sys/js/phys-body.js" type="text/javascript" charset="utf-8" ></script>
+
+
+	<!--The title-->
+	<title>USQ Physics Game Framework</title>
+</head>
+<body ng-controller="master">
+  <div class="wordList">
+<div class="word" ng-repeat="word in game.collected">{{word.title}}</div>
+  </div>
+	<canvas class="debug2D" width="800" height="450" style="position: absolute; top:0; left:0; z-index: 10"></canvas>
+	<script src="sys/js/main.js" type="text/javascript" charset="utf-8" ></script>
+	
+</body>
+</html>
+
+
+
